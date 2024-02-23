@@ -4,18 +4,15 @@ package ru.ok.spring.models;
 public class Person {
     private int id;
     private String name;
-    private int age;
-    private String email;
+    private Level level;
 
     public Person() {
-
     }
 
-    public Person(int id, String name, int age, String email) {
+    public Person(int id, String name, Level level) {
         this.id = id;
         this.name = name;
-        this.age = age;
-        this.email = email;
+        this.level = level;
     }
 
     public int getId() {
@@ -34,19 +31,10 @@ public class Person {
         this.name = name;
     }
 
-    public int getAge() {
-        return age;
+    public Level getLevel() {
+        return level;
     }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
+    public void setLevel(Level level) {
+        this.level = level;
     }
 }

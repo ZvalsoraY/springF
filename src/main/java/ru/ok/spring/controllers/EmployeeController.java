@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import ru.ok.spring.dao.PersonDAO;
+import ru.ok.spring.models.Level;
 import ru.ok.spring.models.Person;
 
 
@@ -36,7 +37,10 @@ public class EmployeeController {
     }
 
     @GetMapping("/new")
-    public String newPerson(@ModelAttribute("person") Person person) {
+    public String newPerson(Model model) {
+        Person person = new Person();
+        model.addAttribute("person", person);
+        model.addAttribute("levels", Level.values());
         return "employee/new";
     }
 
@@ -53,6 +57,7 @@ public class EmployeeController {
     @GetMapping("/{id}/edit")
     public String edit(Model model, @PathVariable("id") int id) {
         model.addAttribute("person", personDAO.show(id));
+        model.addAttribute("levels", Level.values());
         return "employee/edit";
     }
 

@@ -7,16 +7,22 @@
 <body>
 
 <form th:method="POST" th:action="@{/employee}" th:object="${person}">
-    <label for="name">Enter name: </label>
-    <input type="text" th:field="*{name}" id="name"/>
+    <label >Enter name: </label>
+    <div>
+    <input type="text" th:field="*{name}" th:name="name"/>
+    </div>
     <br/>
-    <label for="age">Enter age: </label>
-    <input type="text" th:field="*{age}" id="age"/>
+    <label>Select level: </label>
+    <div>
+        <select th:field="*{level}">
+            <option th:each="level: ${levels}"
+                    th:text="${level.value}"
+                    th:value="${level}">
+                Level</option>
+        </select>
+    </div>
     <br/>
-    <label for="email">Enter email: </label>
-    <input type="text" th:field="*{email}" id="email"/>
-    <br/>
-    <input type="submit" value="Create!"/>
+    <button type="submit">Create!</button>
 </form>
 
 </body>
