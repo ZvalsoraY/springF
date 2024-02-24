@@ -1,6 +1,5 @@
 package ru.ok.spring.models;
 
-
 public class Person {
     private int id;
     private String name;

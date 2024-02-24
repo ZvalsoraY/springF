@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update person</title>
+</head>
+<body>
+
+<form th:method="PATCH" th:action="@{/director/{id}(id=${directorPerson.getId()})}" th:object="${directorPerson}">
+    <label for="name">Enter name: </label>
+    <div>
+        <input type="text" th:field="*{name}" id="name"/>
+    </div>
+    <br/>
+    <label >Enter department: </label>
+    <div>
+        <input type="text" th:field="*{department}" th:name="department"/>
+    </div>
+    <br/>
+    <label>Select employees: </label>
+    <div th:each="person : ${employee}">
+        <input type="checkbox" th:value="${person.id}" th:text="${person.name}" name="personId">
+    </div>
+    <br/>
+    <input type="submit" value="Update!"/>
+</form>
+
+</body>
+</html>
