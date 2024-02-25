@@ -16,11 +16,6 @@ public class PersonDAO {
     {
         employee = new ArrayList<>();
 
-        /*employee.add(new Person(++LAST_PEOPLE_ID, "Tom", 24, "tom@mail.ru"));
-        employee.add(new Person(++LAST_PEOPLE_ID, "Bob", 52, "bob@mail.ru"));
-        employee.add(new Person(++LAST_PEOPLE_ID, "Mike", 18, "mike@yahoo.com"));
-        employee.add(new Person(++LAST_PEOPLE_ID, "Katy", 34, "katy@gmail.com"));*/
-
         employee.add(new Person(++LAST_PEOPLE_ID, "Employee1", Level.LOW));
         employee.add(new Person(++LAST_PEOPLE_ID, "Employee2", Level.LOW));
         employee.add(new Person(++LAST_PEOPLE_ID, "Employee3", Level.LOW));

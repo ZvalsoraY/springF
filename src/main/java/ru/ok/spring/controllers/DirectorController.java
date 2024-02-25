@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.*;
 import ru.ok.spring.dao.DirectorPersonDAO;
 import ru.ok.spring.dao.PersonDAO;
 import ru.ok.spring.models.DirectorPerson;
-import ru.ok.spring.models.Level;
 
 import javax.validation.Valid;
 import java.util.List;
@@ -84,4 +83,3 @@ public class DirectorController {
         return "redirect:/director";
     }
 }
-

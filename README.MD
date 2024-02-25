@@ -1,3 +1,8 @@
+точки входа
+http://localhost:8080/employee
+http://localhost:8080/director
+
+
 Простое веб-приложение на Spring Web MVC framework.
 Требования (* - требование, которым можно пренебречь):
 1. При реализации не использовать spring-boot.
